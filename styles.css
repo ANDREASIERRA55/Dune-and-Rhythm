@@ -76,14 +76,14 @@ h2 {
   margin: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
-          user-select: none; /* Evita que se seleccione el texto al hacer muchos clics */
+          user-select: none;
 }
 .key-container:hover {
   transform: translateY(-2px);
   filter: brightness(1.05);
 }
 
-/* EFECTO DE PULSACIÓN (Sincronizado con tu keydown de JS) */
+/* EFECTO DE PULSACIÓN AL TOCAR */
 .key-container.key-down {
   transform: scale(0.9) !important;
   background: white !important;

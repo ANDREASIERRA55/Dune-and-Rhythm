@@ -52,7 +52,6 @@ h2 { color: $color-madera; margin: 0; }
 .key-container {
   width: 55px;
   height: 55px;
-  // El degradado elegante de arena/madera que tenías
   background: linear-gradient(135deg, #e6d5b8 0%, #c5a47e 100%);
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
@@ -68,7 +67,7 @@ h2 { color: $color-madera; margin: 0; }
     font-weight: bold;
     font-size: 1.2em;
     margin: auto;
-    user-select: none; /* Evita que se seleccione el texto al hacer muchos clics */
+    user-select: none; 
   }
 
   // Animación al pasar el ratón por encima
@@ -78,11 +77,11 @@ h2 { color: $color-madera; margin: 0; }
   }
 }
 
-/* EFECTO DE PULSACIÓN (Sincronizado con tu keydown de JS) */
+/* EFECTO DE PULSACIÓN AL TOCAR */
 .key-container.key-down {
   transform: scale(0.9) !important;
   background: white !important;
-  box-shadow: 0 0 20px #fdbb2d !important; // Ese brillo del atardecer
+  box-shadow: 0 0 20px #fdbb2d !important; 
   border-color: #fdbb2d !important;
 }
 
