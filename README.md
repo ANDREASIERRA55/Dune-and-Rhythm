@@ -1,43 +1,53 @@
 # Dune & Rhythm 🎵
 
-**Dune & Rhythm** es una aplicación musical interactiva que permite reproducir sonidos de batería y kalimba tanto desde un teclado de ordenador como desde botones táctiles en dispositivos móviles.
+**Dune & Rhythm** es una aplicación musical interactiva inspirada en la playa y el atardecer. Combina sonidos de **batería** y **kalimba** que puedes tocar tanto con el teclado como tocando los botones en pantalla.
 
-## 🚀 Características
+---
 
-- 🎹 **Modo teclado**: Toca diferentes sonidos usando las teclas del teclado.
-- 📱 **Modo táctil**: En dispositivos móviles, presiona los botones en pantalla para generar los sonidos.
-- 🥁 **Sonidos de batería**: Incluye crash, hi-hat, roll y varios toms.
-- 🎶 **Sonidos de kalimba**: Reproduce notas de kalimba con distintas teclas.
-- 🌍 **Responsive**: Funciona en ordenadores y dispositivos móviles.
+## ✨ Características
+
+- 🎹 **Interactividad completa** con teclado (computadora)
+- 📱 **Totalmente responsive** y optimizado para móviles (táctil)
+- 🥁 **8 sonidos de batería** (Crash, Hi-hat, Roll y Toms)
+- 🎶 **8 sonidos de kalimba**
+- 🌅 **Diseño inmersivo** con estética de atardecer en la playa
+- ⚡ **Respuesta rápida** y fluida
+
+---
+
+## 🚀 Demo en Vivo
+
+**[Ver Demo](https://andreasierra55.github.io/Dune-and-Rhythm/)**
+
+---
 
 ## 🛠️ Tecnologías utilizadas
 
-- **JavaScript** (interactividad y reproducción de audio)
-- **SCSS** (estilos y diseño responsive)
-- **HTML** (estructura del proyecto)
-
-## 📦 Instalación y uso
-
-1. Clona este repositorio:
-   ```bash
-   git clone https://andreasierra55.github.io/Dune-and-Rhythm/
-   ```
-
-2. Abre el archivo `index.html` en tu navegador.
-
-## 🔥 Uso
-
-- En ordenador: Usa las teclas `A, S, D, F, G, H, J, K` para los sonidos de batería y `Z, X, C, V, B, N, M, ,` para los sonidos de kalimba.
-- En móvil: Toca los botones en pantalla para reproducir los sonidos.
-
-## Capturas de pantalla 📸
-_Aquí se agregará una imagen de la aplicación en funcionamiento._
-
-## Autora ✍️
-**Andrea Sierra**  
-🔗 [Portafolio](https://andreasierra-portfolio.web.app)  
-🔗 [LinkedIn](https://www.linkedin.com/in/andreasierra103)  
+- **HTML5**
+- **CSS3 / SCSS**
+- **Vanilla JavaScript**
 
 ---
-¡Espero que lo disfrutes y te diviertas creando música! 🎶
 
+## 📸 Capturas de Pantalla
+
+![Dune & Rhythm - Vista principal](images/dune-and-rhythm.png)
+
+---
+
+## 🔥 Cómo usar
+
+### En computadora:
+- Usa las teclas **`A S D F G H J K`** → Sonidos de **Batería**
+- Usa las teclas **`Z X C V B N M ,`** → Sonidos de **Kalimba**
+
+### En móvil / tablet:
+- Toca directamente los botones en pantalla
+
+---
+
+## 📦 Instalación Local
+
+```bash
+git clone https://github.com/andreasierra55/Dune-and-Rhythm.git
+cd Dune-and-Rhythm
