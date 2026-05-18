@@ -1,121 +1,228 @@
-@charset "UTF-8";
-/* VARIABLES */
-/* ESTRUCTURA BASE */
+/* Fondo principal */
 body {
   margin: 0;
+  width: 100vw;
   height: 100vh;
-  background: url("images/fondo-playa.png") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
   overflow: hidden;
-}
 
-h1 {
-  color: #651b1b;
-  font-size: 3.5em;
-  text-shadow: 2px 2px 0px white;
-  margin-bottom: 20px;
-}
-
-/* CONTENEDORES */
-.instrument-container {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 10px;
-  width: 90%;
-  max-width: 700px;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-position: center 30%;
+  /* Imagen de playa */
+  background-image: url("images/fondo-playa.png");
   background-repeat: no-repeat;
-  background-size: 180px;
+  background-position: center center;
+  background-size: 100% 100%;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: rgb(241, 237, 237);
+  display: flex;
+  justify-content: center;
 }
 
-.drums {
-  background-image: url("images/drum.png");
+/* Título */
+.title {
+  font-size: 4.2rem;
+  font-family: 'Georgia', serif;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #5e1616;
+  text-shadow:
+    0 3px 8px rgba(255,255,255,0.35),
+    0 5px 18px rgba(0,0,0,0.35);
+
+  text-align: center;
+  margin: 10px 0 35px;
 }
 
-.kalimba {
-  background-image: url("images/kalimba.png");
-  background-size: 140px;
+/* Contenedor de instrumentos */
+.instrument-container {
+
+  /* Efecto cristal */
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.16),
+    rgba(255,255,255,0.08)
+  );
+
+  backdrop-filter: blur(3.5px) saturate(140%);
+  -webkit-backdrop-filter: blur(3.5px) saturate(140%);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 28px;
+  padding: 25px 20px 35px;
+  margin: 25px auto;
+  max-width: 940px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.22),
+    inset 0 1px 1px rgba(255,255,255,0.28),
+    inset 0 -8px 20px rgba(255,255,255,0.05);
 }
 
-h2 {
-  color: #651b1b;
-  margin: 0;
+/* Subtítulos */
+.instrument-container h2 {
+  color: #5e1616;
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 0 0 15px 0;
 }
 
-/* TECLAS */
+/* Imagen del instrumento */
+.instrument-visual {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  margin-bottom: -25px;
+  filter: drop-shadow(0 20px 25px rgba(0,0,0,0.6));
+  z-index: 1;
+  position: relative;
+}
+
+/* Ajuste de tamaño para la kalimba */
+.kalimba .instrument-visual {
+  max-height: 310px;
+}
+
+/* Contenedor de teclas */
+.keys {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  z-index: 3;
+  position: relative;
+  margin-top: -40px;
+  padding-bottom: 15px;
+}
+
+/* Diseño de teclas */
 .key-container {
-  width: 55px;
-  height: 55px;
-  background: linear-gradient(135deg, #e6d5b8 0%, #c5a47e 100%);
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
+  width: 74px;
+  height: 74px;
+  background: linear-gradient(
+    145deg,
+    #f3e7d3,
+    #dbc2a4,
+    #c49a6c,
+    #eedfcb
+  );
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #1f160f;
+  box-shadow:
+    0 10px 18px rgba(0, 0, 0, 0.55),
+    inset 0 12px 16px rgba(255, 255, 255, 0.9),
+    inset 0 -8px 12px rgba(0, 0, 0, 0.5);
+
   transition: all 0.1s ease;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.45);
 }
+
+/* Letras */
 .key-container p {
-  color: #5d4037;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: auto;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.key-container:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.05);
+  margin: 0;
+  z-index: 2;
+  color: #4a2415;
+  text-shadow:
+    0 1px 2px rgba(255,255,255,0.45);
+
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 900;
 }
 
-/* EFECTO DE PULSACIÓN AL TOCAR */
-.key-container.key-down {
-  transform: scale(0.9) !important;
-  background: white !important;
-  box-shadow: 0 0 20px #fdbb2d !important;
-  border-color: #fdbb2d !important;
-}
+/* Brillo superior */
+.key-container::before {
+  content: '';
 
-/* GAVIOTAS */
-.gaviota {
   position: absolute;
-  width: 20px;
-  height: 8px;
-  border-top: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 50% 50% 0 0/100% 100% 0 0;
-  animation: volar 20s linear infinite;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 32% 22%,
+    rgba(255,255,255,0.65) 18%,
+    transparent 68%
+  );
+
+  opacity: 0.65;
+}
+
+/* Hover */
+.key-container:hover {
+  transform: translateY(-4px);
+}
+
+/* Efecto al pulsar */
+.key-container.key-down {
+  transform: translateY(6px) scale(0.85) !important;
+
+  background: linear-gradient(
+    145deg,
+    #b8875c,
+    #8b5a3c
+  ) !important;
+
+  box-shadow:
+    0 4px 12px rgba(90,30,30,0.35) !important;
+    inset 0 -8px 12px rgba(0,0,0,0.45) !important;
+}
+
+/* Gaviotas */
+.gaviota {
+  position: fixed;
+  width: 18px;
+  height: 6px;
+  border-top: 2px solid rgba(88, 24, 24, 0.45);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  animation: volar 25s linear infinite;
+  z-index: 9999;
+  pointer-events: none;
 }
 
 .gaviota::after {
-  content: "";
+  content: '';
   position: absolute;
-  right: -18px;
-  width: 20px;
-  height: 8px;
-  border-top: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  right: -16px;
+  width: 18px;
+  height: 6px;
+  border-top: 2px solid rgba(88, 24, 24, 0.45);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 
+/* Movimiento */
 @keyframes volar {
   from {
-    left: -50px;
+    left: -60px;
   }
+
   to {
     left: 110vw;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 3.4rem;
+  }
+
+  .instrument-visual {
+    max-height: 210px;
+  }
+
+  .kalimba .instrument-visual {
+    max-height: 260px;
+  }
+
+  .key-container {
+    width: 58px;
+    height: 58px;
+    font-size: 1.55rem;
+  }
+}
