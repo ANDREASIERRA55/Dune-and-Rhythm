@@ -128,19 +128,13 @@ drumsElement.innerHTML = drumsDiv;
 kalimbasElement.innerHTML = kalimbasDiv;
 
 function playAudio(id) {
-  const drum = drums.find((drum) => drum.id === id);
-  const kalimba = kalimbas.find((kalimba) => kalimba.id === id);
-
-  if (drum) {
-    const audio = new Audio(drum.src);
-    audio.play();
-  }
-
-  if (kalimba) {
-    const audio = new Audio(kalimba.src);
-    audio.play();
+  const audio = document.getElementById(id);
+  if (audio) {
+    audio.currentTime = 0;     // Reinicia el sonido inmediatamente
+    audio.play().catch(() => {}); // Evita errores de autoplay
   }
 }
+
 
 document.addEventListener("keydown", function (event) {
   const key = event.key.toUpperCase();
