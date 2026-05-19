@@ -1,16 +1,13 @@
 /* Fondo principal */
 body {
   margin: 0;
-  width: 100vw;
   min-height: 100vh;
-  /* Quitamos overflow: hidden para permitir el scroll en móviles si es necesario */
   
   /* Imagen de playa */
   background-image: url("images/fondo-playa.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   
-  /* ¡Aquí colocamos el fixed y cambiamos a cover! */
   background-attachment: fixed;
   background-size: cover; 
   
@@ -261,7 +258,6 @@ body {
 
   .keys {
     display: grid !important;
-    /* Crea 4 columnas exactamente iguales que se reparten el espacio */
     grid-template-columns: repeat(4, 1fr) !important; 
     gap: 10px !important;
     width: 100% !important;
